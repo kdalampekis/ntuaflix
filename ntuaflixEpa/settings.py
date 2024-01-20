@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'rest_framework.authtoken', 
     'ntuaflixEpa_api',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -88,6 +89,17 @@ DATABASES = {
         },      # The default MySQL port
     }
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework_csv.renderers.CSVRenderer',
+    ),
+    # ... other settings ...
+}
+
+
 
 
 # Password validation

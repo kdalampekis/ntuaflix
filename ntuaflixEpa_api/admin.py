@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import TitleBasic
+from .models import TitleObject,NameObject
 
-admin.site.register(TitleBasic)
+admin.site.register(TitleObject)
+admin.site.register(NameObject)
